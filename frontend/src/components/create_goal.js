@@ -48,9 +48,8 @@ const CreateGoal = () => {
         };
     
         axios
-        .post("http://localhost:4000/goals/add", newGoal)
+        .post("/goals/add", newGoal)
         .then((res) => {
-          console.log(res.data);
           toast.success("Цель успешно создана!", { autoClose: 2000, hideProgressBar: true });
         })
         .catch((error) => {

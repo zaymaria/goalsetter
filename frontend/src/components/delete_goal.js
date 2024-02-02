@@ -6,7 +6,7 @@ import { faTrashAlt  } from "@fortawesome/free-solid-svg-icons";
 const DeleteGoal = ({ goalId, onGoalDeleted }) => {
   const handleDelete = async () => {
     try {
-      await axios.delete(`http://localhost:4000/goals/delete/${goalId}`);
+      await axios.delete(`/goals/delete/${goalId}`);
       console.log("Goal deleted successfully");
       onGoalDeleted(goalId); 
     } catch (error) {

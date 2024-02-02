@@ -15,7 +15,7 @@ const EditGoal = () => {
   });
 
   useEffect(() => {
-    axios.get(`http://localhost:4000/goals/${id}`)
+    axios.get(`/goals/${id}`)
       .then((res) => {
         const { goal_description, goal_sphere, goal_timeframe, goal_priority, goal_completed } = res.data;
         setState({
@@ -59,7 +59,7 @@ const EditGoal = () => {
       goal_completed: state.goal_completed
     };
 
-    axios.post(`http://localhost:4000/goals/update/${id}`, obj)
+    axios.post(`/goals/update/${id}`, obj)
       .then((res) => console.log(res.data));
      navigate("/");
   };

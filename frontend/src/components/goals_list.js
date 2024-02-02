@@ -6,10 +6,11 @@ const GoalsList = () => {
   const [goals, setGoals] = useState([]);
   const [error, setError] = useState(null);
 
+
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("http://localhost:4000/goals");
+        const response = await axios.get("/goals");
         setGoals(response.data);
       } catch (error) {
         setError("Не удалось загрузить данные. Пожалуйста, попробуйте позже.");

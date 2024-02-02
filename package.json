@@ -4,8 +4,8 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "start": "cd ./backend/ && npm install && node server.js",
-        "heroku-postbuild": "cd ./frontend/ && npm install && npm run build"
+      "start": "node backend/server.js",
+      "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install npm && run build"
     },
     "keywords": [],
     "author": "",
@@ -15,3 +15,5 @@
       }
   }
   
+
+
